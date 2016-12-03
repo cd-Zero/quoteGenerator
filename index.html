@@ -26,20 +26,24 @@
                 <div class='row'>
                     <div class='col-sm-12 bqspace'>
 
-                        <!--    make this block quote dynamic      -->
-                        <blockquote cite="#" >
-                          <p id ="quote">
-                            yo yo
-                          </p>
-                        </blockquote>
+                      <blockquote   id ="quote" cite="http://">
+                        <p>
+                          Click button to generate quotes!
+                        </p>
+                      </blockquote>
+
 
                     </div>
-                </div>
+
+
+
+              </div>
                 <div class='row'>
                     <div class='col-sm-6 col-sm-offset-3 text-center'>
 
                         <!-- when button is pressed sample block quote is generated -->
-                        <button type="button" id ='btn'>                        Gernerate
+                        <button type="button" class ='btn' id ='btn'>
+                            Gernerate
                         </button>
 
                     </div>
@@ -47,6 +51,27 @@
             </div>
     </div>
     </div>
+    <!-- Handlebars Temple -->
+    <script id ="quoteTemplate" type="text/x-handlebars-template">
+        <p id=x>{{{content}}}</p>
+        <p> --- {{title}}</p>
+          <div class='col-sm-6 col-sm-offset-3 text-center'>
+              <a id="share" href="">ddddd</a>
+
+            </div>
+    </script>
+
+
+    <!-- handlebars-v4 javascript library -->
+    <script src="js/handlebars-v4.0.5.js" charset="utf-8"></script>
+    <!-- web intent functionality -->
+    <script src="http://webintents.org/webintents.min.js"></script>
+
+    <!-- main javascript -->
+    <script src="js/main.js"></script>
+
 </body>
-<script src="js/main.js"></script>
+
+
+</script>
 </html>
