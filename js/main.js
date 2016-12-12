@@ -14,14 +14,16 @@ var blockquote        =  document.querySelector('blockquote');
 button.addEventListener("click", function(e){
 var random = Math.floor((Math.random() * 25) + 1)
 var xhr    =  new XMLHttpRequest();
-
+// get data
 xhr.open('GET',"http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]="+random,true);
+xhr.withCredentials = true;
+xhr.send(null);
   xhr.onload    = function(){
   var quoteData = JSON.parse(xhr.responseText);
-
+  console.log(quoteData);
+    // renders HTML and twitter share button info
     changetext(quoteData);
 
-//  renderHTML(quoteData);
 }
   xhr.send();
 
@@ -30,9 +32,9 @@ xhr.open('GET',"http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&fil
 
 
 
-//creates button
+
   function changetext(data){
-  //q.innerHTML   = data[0].content;
+// quote template creation
   console.log("testing");
   console.log(data);
 
@@ -42,9 +44,10 @@ xhr.open('GET',"http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&fil
    var quoteContainer             = document.querySelector('#quote');
    quoteContainer.innerHTML       = generatedHTML;
 
+// twitter share button
   var inject = document.querySelector('#quote').innerText;
 
-   document.querySelector("#share").href = 'https://twitter.com/intent/tweet?text=' +inject;
+  document.querySelector("#share").href = 'https://twitter.com/intent/tweet?text=' +inject;
 
 
 }

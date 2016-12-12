@@ -1,0 +1,20 @@
+{
+  "name": "quote-generator",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "file:node_modules/jquery",
+    "normalize.css": "^5.0.0",
+    "postcss": "^5.2.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-watch": "^4.3.11",
+    "postcss-import": "^9.0.0",
+    "postcss-mixins": "^5.4.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0"
+  }
+}
