@@ -1,3 +1,4 @@
+@import "normalize.css";
 @import "global/_global.css";
 @import "global/_variable.css";
 @import "modules/_navigation.css";
