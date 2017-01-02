@@ -2,6 +2,6 @@
 
 
 // css gulp tasks
-require('/home/zero/Desktop/fccProjects/quote-generator/gulp/tasks/css');
+require('./gulp/tasks/styles');
 // watch gulp tasks
-require('/home/zero/Desktop/fccProjects/quote-generator/gulp/tasks/watch');
+require('./gulp/tasks/watch');

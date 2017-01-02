@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./temp/main.css"/>
+</head>
+
+<body>
+  <!-- Navigation section -->
+
+    <ul class = "nav-bar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <!-- blockquote section -->
+
+            <div class="container">
+                <div class='row row__quote'>
+                      <!-- don't change id -->
+                      <blockquote   id ="quote" cite="http://">
+                        <p>
+                          Click button to generate quotes!
+                        </p>
+                      </blockquote>
+              </div>
+            </div>
+
+    <!-- Generate Button section -->
+
+                    <div class='row row__button'>
+                        <!-- don't change id -->
+                        <!-- when button is pressed sample block quote is generated -->
+
+                        <button type="button" class ='btn' id ='btn'>
+                            Gernerate
+                        </button>
+                    </div>
+                      </div>
+    </div>
+  <!-- Handlebars Temple section -->
+    <script id ="quoteTemplate" type="text/x-handlebars-template">
+        <p id=x>{{{content}}}</p>
+        <p> --- {{title}}</p>
+          <div >
+                <a class = 'twitter-share-button' id="share" href="">Twitter</a>
+          </div>
+    </script>
+
+
+    <!-- handlebars-v4 javascript library -->
+    <script src="./assets/js/handlebars-v4.0.5.js" charset="utf-8"></script>
+
+    <!-- main javascript -->
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
