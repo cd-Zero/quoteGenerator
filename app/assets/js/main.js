@@ -1,3 +1,8 @@
+
+var $ = require('jquery')
+$('document').onload(alert('jquery installed :)'))
+
+
 var button            =  document.querySelector("#btn");
 var q                 =  document.querySelector('#quote');
 var tweetbutton       =  document.querySelector("#tweet");

@@ -18,10 +18,10 @@ gulp.task('watch', function() {
   watch('./app/assets/styles/**/*.css', function() {
     gulp.start('cssInject');
   });
-
-  // watch('./app/assets/scripts/**/*.js', function() {
-  //   gulp.start('scriptsRefresh');
-  // })
+// watches development j.s. files and fires scriptsRefresh
+  watch('./app/assets/js/**/*.js', function() {
+    gulp.start('scriptsRefresh');
+  })
 
 });
 
@@ -30,6 +30,9 @@ gulp.task('cssInject', ['styles'], function() {
     .pipe(browserSync.stream());
 });
 
-// gulp.task('scriptsRefresh', ['scripts'], function() {
-//   browserSync.reload();
-// });
+// once quoteGenerator/gulp/tasks/scripts.js is finished scriptsRefresh can fire
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+  // loads browser sync
+  browserSync.reload();
+});
